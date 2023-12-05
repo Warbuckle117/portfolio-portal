@@ -1,0 +1,27 @@
+version: "3.8"
+
+
+services:
+  frontend:
+    build:
+    image: node:18-apline
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./frontend:/dev/frontend
+    working_dir: /dev/frontend
+    command: bash -c "npm i && npm run dev"
+  
+#  data-service:
+#    image: node:18-alpine
+#    ports:
+#      - "3102:3102"
+#    volumes:
+#      - ./backend/data-service:/dev/backend/operational-data-service
+#    working_dir: /dev/backend/data-service
+#    command: bash -c "npm i && npm run migrate && npm run dev"
+#    restart: on-failure
+#    depends_on:
+#      - postgres
+  
+
