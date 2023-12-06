@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import Users from "./Pages/Users";
+import ToolPage from "./Pages/ToolPage";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import {Route, Routes} from "react-router-dom";
+import {Link, Route, Routes} from "react-router-dom";
 import TitleBar from "./Components/TitleBar";
 
 
@@ -21,17 +21,16 @@ function App() {
         .then(data => setBackendUsers(data))
   }
 
-  console.log("These are the Backend Users", backendUsers)
+  console.log("backend users: \n", backendUsers)
 
   return (
     <div className="App">
         <TitleBar />
-        <div>Work in Progress</div>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About/>} />
-            <Route path="/users" element={<Users/>} />
-            <Route path="*" element={<>404 NOT FOUND</>}/>
+            <Route path="/tools" element={<ToolPage users={[]} tools={[]}/>} />
+            <Route path="*" element={<>You seem to be lost return to <Link to="/">Home</Link></>}/>
         </Routes>
     </div>
   );

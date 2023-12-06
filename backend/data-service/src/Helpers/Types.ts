@@ -4,3 +4,9 @@ export interface User {
 export interface UserProps {
     users: User[]
 }
+
+export interface Tool {
+    name: string,
+    description: string,
+    url: string
+}

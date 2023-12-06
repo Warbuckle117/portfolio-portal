@@ -1,1 +1,1 @@
-export const navLinkStyles = { textDecoration: "none", color: "unset" };
+export const navLinkStyles = { textDecoration: "none", color: "unset", margin: "10px 10px" };
