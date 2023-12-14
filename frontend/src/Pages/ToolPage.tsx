@@ -1,25 +1,15 @@
-import Button from '@mui/material/Button';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import {Box, Button} from '@mui/material';
 import { navLinkStyles } from '../Helpers/Styles';
-
-interface User {
-    username: string
-}
-
-interface Tool {
-    name: string,
-    description: string,
-    url: string
-}
-interface ToolProps {
-    users: User[],
-    tools: Tool[]
-}
+import './ToolPage.css'
+import {Tool, ToolProps} from "../Helpers/Types";
 
 
 
-const ToolPage = ({users, tools}: ToolProps) => {
+
+
+const ToolPage = ({users}: ToolProps) => {
     const [ToolList, setToolList] = React.useState<Tool[]>([])
 
     useEffect(() => {
@@ -36,9 +26,9 @@ const ToolPage = ({users, tools}: ToolProps) => {
         if(ToolList) {
             return ToolList.map((tool, index) => {
                 return (
-                    <Link to={tool.url}style={navLinkStyles}>
-                        <Button key={index} color="inherit">
-                            <div>{tool.name}</div>
+                    <Link className="tool-list-item" to={tool.url} style={navLinkStyles} key={index}>
+                        <Button  color="inherit">
+                            {tool.name}
                         </Button>
                     </Link>
 
@@ -50,12 +40,15 @@ const ToolPage = ({users, tools}: ToolProps) => {
     }
 
     return (
-        <div>
+        <Box className="tool-page-container">
             <h1>Tool Page</h1>
+            <div>List of Tools</div>
+            <br/>
+            <Box className="tool-list-box">
+                {renderToolList()}
+            </Box>
             <div>Work in Progress</div>
-            <div>List of Personal Tools</div>
-            <>{renderToolList()}</>
-        </div>
+        </Box>
     );
 };
 

@@ -1,0 +1,14 @@
+.title-bar-link {
+    display: flex;
+    margin: 10px 10px;
+    align-content: center;
+    justify-content: center;
+    height: 40px;
+    width: 120px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.title-bar-link button {
+    color: inherit;
+}

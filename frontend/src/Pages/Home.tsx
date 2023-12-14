@@ -2,9 +2,21 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <h1>
-            Home
-        </h1>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100%"}}
+        >
+            <h1>
+                Home
+            </h1>
+            <p>
+                This is the home page
+            </p>
+        </div>
+        
     );
 };
 

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
+import {Link, Route, Routes} from "react-router-dom";
 import './App.css';
 import ToolPage from "./Pages/ToolPage";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import {Link, Route, Routes} from "react-router-dom";
 import TitleBar from "./Components/TitleBar";
 
 
@@ -26,12 +26,14 @@ function App() {
   return (
     <div className="App">
         <TitleBar />
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/tools" element={<ToolPage users={[]} tools={[]}/>} />
-            <Route path="*" element={<>You seem to be lost return to <Link to="/">Home</Link></>}/>
-        </Routes>
+        <div className="page-content">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About/>} />
+                <Route path="/tools" element={<ToolPage users={[]} />} />
+                <Route path="*" element={<>You seem to be lost return to <Link to="/">Home</Link></>}/>
+            </Routes>
+        </div>
     </div>
   );
 }

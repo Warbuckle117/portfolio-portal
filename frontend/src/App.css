@@ -1,0 +1,15 @@
+.page-content {
+    display: flex;
+    margin: unset;
+    padding: 10px 50px;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
