@@ -7,5 +7,4 @@ test('renders learn react link', () => {
   render(<BrowserRouter><App /></BrowserRouter>);
   const linkElement = screen.getByText("This is the home page");
   expect(linkElement).toBeInTheDocument();
-  expect(true).toBe(true);
 });
