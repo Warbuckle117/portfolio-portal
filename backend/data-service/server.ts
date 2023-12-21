@@ -42,7 +42,6 @@ app.get("/tools", (req: Request, res: Response) => {
 app.get("/all/users", async (req: Request, res: Response) => {
     const result = await getAllUsers()
     res.json(result)
-    // res.json({testUsers})
 })
 
 app.listen(port, () => { console.log(`server running on port localhost:${port}`)})

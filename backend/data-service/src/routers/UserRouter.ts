@@ -5,7 +5,7 @@ const db = require("../../db/db.js")
 const userTable = db("users")
 export const getAllUsers = async () => {
     try {
-        return await userTable.select("id", "username").then((data: User) => data)
+        return await userTable.select("").then((data: User) => data)
     }
     catch (error) {
         console.log(error)
