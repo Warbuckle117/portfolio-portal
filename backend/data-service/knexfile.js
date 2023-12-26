@@ -8,7 +8,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      host: 'portal-db',
+      host: 'localhost',
       user: 'postgres',
       password: 'password',
       database: 'portal-db',
@@ -16,6 +16,19 @@ module.exports = {
     },
     migrations: {
         directory: './db/migrations',
+    },
+  },
+  docker: {
+    client: 'pg',
+    connection: {
+      host: 'portal-db',
+      user: 'postgres',
+      password: 'password',
+      database: 'portal-db',
+      port: 5432,
+    },
+    migrations: {
+      directory: './db/migrations',
     },
   },
 };

@@ -7,11 +7,6 @@ networks:
 services:
   portal-frontend:
     build: ./frontend
-    environment:
-      - DATABASE_URL="postgres://postgres:password@localhost:5432/portal-db"
-      - DATABASE_NAME="portal-db"
-      - DATABASE_PASSWORD="password"
-      - DATABASE_USER="postgres"
     ports:
       - "3000:3000"
     volumes:

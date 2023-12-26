@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import {Box, Button} from '@mui/material';
 import { navLinkStyles } from '../Helpers/Styles';
 import './ToolPage.css'
-import {Tool, ToolProps} from "../Helpers/Types";
+import {Tool, User} from "../Helpers/Types";
 
+export interface ToolProps {
+    users: User[],
+}
 
-
-
-
-const ToolPage = ({users}: ToolProps) => {
+const ToolPage = () => {
     const [ToolList, setToolList] = React.useState<Tool[]>([])
 
     useEffect(() => {
@@ -19,11 +19,11 @@ const ToolPage = ({users}: ToolProps) => {
     function getToolList() {
         fetch("http://localhost:3102/tools")
             .then(response => response.json())
-            .then(data => setToolList(data.testTools))
+            .then(data => setToolList(data))
     }
 
     function renderToolList() { 
-        if(ToolList) {
+        if(ToolList.length > 0) {
             return ToolList.map((tool, index) => {
                 return (
                     <Link className="tool-list-item" to={tool.url} style={navLinkStyles} key={index}>
@@ -31,11 +31,10 @@ const ToolPage = ({users}: ToolProps) => {
                             {tool.name}
                         </Button>
                     </Link>
-
                 )
             })
         } else {
-            return <div>Work in Progress</div>
+            return <div>Loading Tools...</div>
         }
     }
 

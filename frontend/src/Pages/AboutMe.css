@@ -1,0 +1,114 @@
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.about-me-header {
+  color: #000111;
+}
+
+.about-me-body {
+}
+
+.about-me-card {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+  height: 90%;
+  width: 100%;
+
+}
+
+.about-me-card p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-image {
+  display: flex;
+  margin: 10px;
+  padding: 5px;
+  height: 200px;
+  width: 200px;
+  border-radius: 25%;
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.about-me-content p {
+  display: flex;
+  text-align: left;
+  font-size: 20px;
+}
+
+.website-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.website-list-item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+}
+
+
+.website-list-item img {
+  display: flex;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.about-me-education {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 10px;
+  width: 100%;
+}
+
+.education-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: auto;
+  padding: 10px;
+  height: 20%;
+}
+
+
+.education-category-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.education-category-item h3 {
+  justify-self: flex-start;
+  align-self: center;
+}
+
