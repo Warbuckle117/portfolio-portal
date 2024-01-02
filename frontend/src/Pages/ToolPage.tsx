@@ -14,15 +14,15 @@ const DATA_SERVICE_URL = process.env.DATA_SERVICE_PORT || 'http://localhost:3102
 const ToolPage = () => {
     const [ToolList, setToolList] = React.useState<Tool[]>([])
 
-    useEffect(() => {
-        getToolList()
-    }, [])
+    // useEffect(() => {
+    //     getToolList()
+    // }, [])
     
-    function getToolList() {
-        fetch(`${DATA_SERVICE_URL}/tools`)
-            .then(response => response.json())
-            .then(data => setToolList(data))
-    }
+    // function getToolList() {
+    //     fetch(`${DATA_SERVICE_URL}/tools`)
+    //         .then(response => response.json())
+    //         .then(data => setToolList(data))
+    // }
 
     function renderToolList() { 
         if(ToolList.length > 0) {
@@ -36,7 +36,7 @@ const ToolPage = () => {
                 )
             })
         } else {
-            return <div>Loading Tools...</div>
+            return <div>Under Development</div>
         }
     }
 
@@ -48,7 +48,6 @@ const ToolPage = () => {
             <Box className="tool-list-box">
                 {renderToolList()}
             </Box>
-            <div>Work in Progress</div>
         </Box>
     );
 };

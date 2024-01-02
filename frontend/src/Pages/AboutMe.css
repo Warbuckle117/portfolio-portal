@@ -113,3 +113,9 @@
   align-self: center;
 }
 
+.education-category-item ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

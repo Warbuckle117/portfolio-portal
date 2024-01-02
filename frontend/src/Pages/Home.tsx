@@ -1,17 +1,18 @@
 import React, {useEffect, useState} from 'react';
+import {Link} from "react-router-dom";
 
 const Home = () => {
-    const [userData, setUserData] = useState<any>()
+    // const [userData, setUserData] = useState<any>()
 
-    useEffect(() => {
-        getUserList()
-    }, []);
+    // useEffect(() => {
+    //     getUserList()
+    // }, []);
 
-    function getUserList() {
-        fetch("http://localhost:3102/all/users")
-            .then(response => response.json())
-            .then(data => setUserData(data))
-    }
+    // function getUserList() {
+    //     fetch("http://localhost:3102/")
+    //         .then(response => response.json())
+    //         .then(data => setUserData(data))
+    // }
 
     return (
         <div style={{
@@ -25,7 +26,10 @@ const Home = () => {
                 Home
             </h1>
             <p>
-                This is the home page
+                Welcome to my website!
+            </p>
+            <p>
+                Checkout my <Link to={"/about"}>About Me</Link> page to learn more about me.
             </p>
         </div>
         

@@ -62,24 +62,24 @@ const AboutMe = () => {
                         <Box className="education-category-item">
                             <h3>CompTIA</h3>
                             <List>
-                                <ListItem><ListItemIcon></ListItemIcon> A+</ListItem>
-                                <ListItem><ListItemIcon></ListItemIcon>Network+</ListItem>
-                                <ListItem><ListItemIcon></ListItemIcon>Security+</ListItem>
-                                <ListItem><ListItemIcon></ListItemIcon>Cloud+</ListItem>
-                                <ListItem><ListItemIcon></ListItemIcon>Data+</ListItem>
+                                <ListItem> A+</ListItem>
+                                <ListItem>Network+</ListItem>
+                                <ListItem>Security+</ListItem>
+                                <ListItem>Cloud+</ListItem>
+                                <ListItem>Data+</ListItem>
                             </List>
                         </Box>
                         <Box className="education-category-item">
                             <h3>Azure</h3>
                             <List>
-                                <ListItem><ListItemIcon></ListItemIcon>AZ-900: Azure Fundamentals</ListItem>
-                                <ListItem><ListItemIcon></ListItemIcon>AI-900: Azure AI Fundamentals</ListItem>
+                                <ListItem>AZ-900: Azure Fundamentals</ListItem>
+                                <ListItem>AI-900: Azure AI Fundamentals</ListItem>
                             </List>
                         </Box>
                         <Box className="education-category-item">
                             <h3>AWS</h3>
                             <List>
-                                <ListItem><ListItemIcon></ListItemIcon>Cloud Practitioner  (In progress)</ListItem>
+                                <ListItem>Cloud Practitioner  (In progress)</ListItem>
                             </List>
                         </Box>
                     </Box>
