@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a base image
-FROM node:18-alpine
+FROM node:alpine
 
 # Set the working directory in the container
 WORKDIR /app/frontend
@@ -10,11 +10,11 @@ COPY package.json ./
 # Install app dependencies
 RUN npm install
 
-## Copy the local files to the container
-#COPY frontend .
+# Copy the local files to the container
+COPY . .
 
-# Expose the port that Next.js will run on
+# Expose the port that the app will run on
 EXPOSE 3000
 
-# Start the Next.js app
+# Start the React app
 CMD ["npm", "start"]

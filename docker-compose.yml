@@ -5,8 +5,12 @@ networks:
     driver: bridge
 
 services:
-  portal-frontend:
+  frontend:
     build: ./frontend
+    image: "warbuckle117/portfolio-portal-frontend:latest"
+    environment:
+      - DATA-SERVICE-PORT=3102
+      - DATA-SERVICE-URL=http://localhost:3102
     ports:
       - "3000:3000"
     volumes:
@@ -14,28 +18,36 @@ services:
     working_dir: /app/frontend
     networks:
       - portal-network
+    depends_on:
+      - data-service
 
-  portal-data-service:
+  data-service:
     build: ./backend/data-service
+    image: "warbuckle117/portfolio-portal-data-service:latest"
     ports:
       - "3102:3102"
     environment:
+      - NODE_ENV=development
       - DATABASE_URL="postgres://postgres:password@localhost:5432/portal-db"
       - DATABASE_NAME="portal-db"
       - DATABASE_PASSWORD="password"
       - DATABASE_USER="postgres"
+      - DATABASE_PORT=5432
     volumes:
       - ./backend/data-service:/app/data-service
     working_dir: /app/data-service
     networks:
       - portal-network
+    depends_on:
+      - portal-db
 
   portal-db:
-    image: "postgres:latest"
+    image: "postgres:15-alpine"
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=portal-db
+      - NODE_ENV=development
     ports:
       - "5432:5432"
     networks:

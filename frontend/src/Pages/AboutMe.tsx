@@ -25,19 +25,18 @@ const AboutMe = () => {
                     />
                     <Container className='about-me-content'>
                         <p className="short-bio">
-                            I am a seasoned Full-Stack Software Developer with two years of expertise in the Software Development
-                            Lifecycle and a robust background in Information Technology, including a notable role as a Senior Help
-                            Desk Administrator in the United States Army. I excel in developing cutting-edge web applications to
-                            cloud environments. My proficiency spans technologies like React, Java, TypeScript, Golang, and cloud
-                            platforms such as Microsoft Azure and Amazon Web Services. Beyond my technical abilities, I am a
-                            military veteran with an active Secret Security Clearance.
+                            I am a transitioning Army NCO with 8 years of experience in Information Technology, including 2 years
+                            as a Full-Stack Software Developer and 6 years in a Senior Helpdesk Administrator role. My expertise lies in
+                            developing advanced web applications for cloud environments. I am proficient in technologies such as React,
+                            Java, TypeScript, and Golang, and I have experience working with cloud platforms like Microsoft Azure and
+                            Amazon Web Services.
                         </p>
                         <p className="hobbies">
-                            My diverse hobbies blend digital and real-world experiences. From PC and Xbox gaming to Virtual
-                            Reality and software projects, I find joy in both virtual and tangible realms. Balancing beach walks
-                            with the adrenaline of flight sims and FPS games, I explore new places, be they in virtual landscapes
-                            or uncharted territories. Each hobby contributes to a dynamic tapestry of leisure, weaving together my
-                            passion for technology and the simple joys of the real world.
+                            I enjoy a mix of digital and real-world activities. Whether it's gaming on my PC and Xbox, diving into
+                            Virtual Reality, or working on software projects, I find happiness in both virtual and tangible experiences.
+                            I balance relaxing beach walks with the excitement of flight sims and FPS games, exploring new places in
+                            both virtual and real settings. These hobbies create a diverse and enjoyable leisure time, combining my
+                            love for technology with the simple pleasures of the real world.
                         </p>
                         <Box className="website-list">
                             <Link className="website-list-item" to="https://www.linkedin.com/in/markarbuckle" target="_blank">

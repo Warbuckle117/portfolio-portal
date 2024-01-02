@@ -8,8 +8,7 @@ exports.up = function(knex) {
           { username: "Mark" },
           { username: "Narcy" },
           { username: "Guest" },
-      ])
-          .then(() => console.log("Created users"))
+      ]).then(() => console.log("Created users"))
   )
 };
 

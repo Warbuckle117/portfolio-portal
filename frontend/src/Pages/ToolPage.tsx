@@ -9,6 +9,8 @@ export interface ToolProps {
     users: User[],
 }
 
+const DATA_SERVICE_URL = process.env.DATA_SERVICE_PORT || 'http://localhost:3102'
+
 const ToolPage = () => {
     const [ToolList, setToolList] = React.useState<Tool[]>([])
 
@@ -17,7 +19,7 @@ const ToolPage = () => {
     }, [])
     
     function getToolList() {
-        fetch("http://localhost:3102/tools")
+        fetch(`${DATA_SERVICE_URL}/tools`)
             .then(response => response.json())
             .then(data => setToolList(data))
     }

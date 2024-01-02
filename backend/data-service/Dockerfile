@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a base image
-FROM node:18-alpine
+FROM node:alpine
 
 # Set the working directory in the container
 WORKDIR /app/data-service
@@ -9,6 +9,9 @@ COPY package.json ./
 
 # Install app dependencies
 RUN npm install
+
+# Copy the local files to the container
+COPY . .
 
 # Expose the port that Next.js will run on
 EXPOSE 3102
