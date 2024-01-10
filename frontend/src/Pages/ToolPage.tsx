@@ -14,15 +14,15 @@ const DATA_SERVICE_URL = process.env.DATA_SERVICE_PORT || 'http://localhost:3102
 const ToolPage = () => {
     const [ToolList, setToolList] = React.useState<Tool[]>([])
 
-    // useEffect(() => {
-    //     getToolList()
-    // }, [])
+    useEffect(() => {
+        process.env.NODE_ENV === "development" ? getToolList() : console.log("Production Mode")
+    }, [])
     
-    // function getToolList() {
-    //     fetch(`${DATA_SERVICE_URL}/tools`)
-    //         .then(response => response.json())
-    //         .then(data => setToolList(data))
-    // }
+    function getToolList() {
+        fetch(`${DATA_SERVICE_URL}/tools`)
+            .then(response => response.json())
+            .then(data => setToolList(data))
+    }
 
     function renderToolList() { 
         if(ToolList.length > 0) {
