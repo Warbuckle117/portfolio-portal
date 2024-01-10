@@ -14,7 +14,7 @@ const ToolPage = () => {
     const [ToolList, setToolList] = React.useState<Tool[]>([])
 
     useEffect(() => {
-        process.env.REACT_APP_ENVIRONMENT === "development" ? getToolList() : console.log("Production Mode")
+        getToolList()
     }, [])
     
     function getToolList() {
