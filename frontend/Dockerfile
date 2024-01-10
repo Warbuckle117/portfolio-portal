@@ -13,6 +13,8 @@ RUN npm install
 # Copy the local files to the container
 COPY . .
 
+ENV ENVIRONMENT=development
+
 # Expose the port that the app will run on
 EXPOSE 3000
 

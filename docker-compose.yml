@@ -27,7 +27,6 @@ services:
     ports:
       - "3102:3102"
     environment:
-      - NODE_ENV=development
       - DATABASE_URL="postgres://postgres:password@localhost:5432/portal-db"
       - DATABASE_NAME="portal-db"
       - DATABASE_PASSWORD="password"
