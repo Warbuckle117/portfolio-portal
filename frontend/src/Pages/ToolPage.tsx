@@ -9,21 +9,20 @@ export interface ToolProps {
     users: User[],
 }
 
-const DATA_SERVICE_URL = process.env.DATA_SERVICE_PORT || 'http://localhost:3102'
 
 const ToolPage = () => {
     const [ToolList, setToolList] = React.useState<Tool[]>([])
 
     useEffect(() => {
-        process.env.ENVIROMENT === "development" ? getToolList() : console.log("Production Mode")
-        console.log(process.env.ENVIROMENT)
+        process.env.REACT_APP_ENVIRONMENT === "development" ? getToolList() : console.log("Production Mode")
     }, [])
     
     function getToolList() {
-        fetch(`${DATA_SERVICE_URL}/tools`)
+        fetch(`${process.env.REACT_APP_DATA_SERVICE_URL}/tools`)
             .then(response => response.json())
             .then(data => setToolList(data))
     }
+
 
     function renderToolList() { 
         if(ToolList.length > 0) {
