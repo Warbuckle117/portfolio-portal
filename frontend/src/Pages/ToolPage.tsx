@@ -16,6 +16,7 @@ const ToolPage = () => {
 
     useEffect(() => {
         process.env.NODE_ENV === "development" ? getToolList() : console.log("Production Mode")
+        console.log(process.env.NODE_ENV)
     }, [])
     
     function getToolList() {
