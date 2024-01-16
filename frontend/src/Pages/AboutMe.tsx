@@ -25,8 +25,8 @@ const AboutMe = () => {
                     />
                     <Container className='about-me-content'>
                         <p className="short-bio">
-                            I am a transitioning Army NCO with 8 years of experience in Information Technology, including 2 years
-                            as a Full-Stack Software Developer and 6 years in a Senior Helpdesk Administrator role. My expertise lies in
+                            I am a transitioning from the Army with 8 years of experience in Information Technology, including 2 years
+                            as a Full-Stack Software Engineer and 6 years in a Senior Helpdesk Administrator role. My expertise lies in
                             developing advanced web applications for cloud environments. I am proficient in technologies such as React,
                             Java, TypeScript, and Golang, and I have experience working with cloud platforms like Microsoft Azure and
                             Amazon Web Services.
