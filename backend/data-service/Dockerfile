@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a base image
-FROM node:alpine
+FROM node:lts-alpine3.19
 
 # Set the working directory in the container
 WORKDIR /app/data-service

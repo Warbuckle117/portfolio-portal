@@ -14,13 +14,18 @@ const ToolPage = () => {
     const [ToolList, setToolList] = React.useState<Tool[]>([])
 
     useEffect(() => {
-        getToolList()
+        if(process.env.NODE_ENV === "development"){
+            getToolList()
+        } else {
+            setToolList([])
+        }
     }, [])
     
     function getToolList() {
-        fetch(`${process.env.REACT_APP_DATA_SERVICE_URL}/tools`)
-            .then(response => response.json())
-            .then(data => setToolList(data))
+            fetch(`${process.env.REACT_APP_DATA_SERVICE_URL}/tools`)
+                .then(response => response.json())
+                .then(data => console.log(data))
+
     }
 
 
