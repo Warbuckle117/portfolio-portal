@@ -55,9 +55,12 @@ const AboutMe = () => {
                     <h2>Education</h2>
                     <Box className="education-category">
                         <Box className="education-category-item">
-                            <h3>Western Governors University</h3>
-                            <p>Bachelor of Science in Cloud Computing</p>
-                            <p>Projected Graduation: June 2026</p>
+                            <h3>College</h3>
+                            <List>
+                                <ListItem>Western Governors University</ListItem>
+                                <ListItem>Bachelor of Science in Cloud Computing</ListItem>
+                                <ListItem>Projected Graduation: June 2026</ListItem>
+                            </List>
                         </Box>
                         <Box className="education-category-item">
                             <h3>CompTIA</h3>
@@ -79,7 +82,13 @@ const AboutMe = () => {
                         <Box className="education-category-item">
                             <h3>AWS</h3>
                             <List>
-                                <ListItem>Cloud Practitioner  (In progress)</ListItem>
+                                <ListItem>Cloud Practitioner</ListItem>
+                            </List>
+                        </Box>
+                        <Box className="education-category-item">
+                            <h3>Management</h3>
+                            <List>
+                                <ListItem>Certified Scrum Master (In Progress)</ListItem>
                             </List>
                         </Box>
                     </Box>
