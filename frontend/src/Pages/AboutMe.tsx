@@ -63,16 +63,6 @@ const AboutMe = () => {
                             </List>
                         </Box>
                         <Box className="education-category-item">
-                            <h3>CompTIA</h3>
-                            <List>
-                                <ListItem> A+</ListItem>
-                                <ListItem>Network+</ListItem>
-                                <ListItem>Security+</ListItem>
-                                <ListItem>Cloud+</ListItem>
-                                <ListItem>Data+</ListItem>
-                            </List>
-                        </Box>
-                        <Box className="education-category-item">
                             <h3>Azure</h3>
                             <List>
                                 <ListItem>AZ-900: Azure Fundamentals</ListItem>
@@ -83,6 +73,16 @@ const AboutMe = () => {
                             <h3>AWS</h3>
                             <List>
                                 <ListItem>Cloud Practitioner</ListItem>
+                            </List>
+                        </Box>
+                        <Box className="education-category-item">
+                            <h3>CompTIA</h3>
+                            <List>
+                                <ListItem> A+</ListItem>
+                                <ListItem>Network+</ListItem>
+                                <ListItem>Security+</ListItem>
+                                <ListItem>Cloud+</ListItem>
+                                <ListItem>Data+</ListItem>
                             </List>
                         </Box>
                         <Box className="education-category-item">
