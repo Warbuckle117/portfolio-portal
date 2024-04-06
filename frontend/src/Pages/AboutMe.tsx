@@ -25,7 +25,7 @@ const AboutMe = () => {
                     />
                     <Container className='about-me-content'>
                         <p className="short-bio">
-                            I am transitioning from the Army with 8 years of experience in Information Technology, including 2 years
+                            I am an Army Veteran with 8 years of experience in Information Technology, including 2 years
                             as a Full-Stack Software Engineer and 6 years in a Senior Helpdesk Administrator role. My expertise lies in
                             developing advanced web applications for cloud environments. I am proficient in technologies such as React,
                             Java, TypeScript, and Golang, and I have experience working with cloud platforms like Microsoft Azure and
@@ -88,7 +88,14 @@ const AboutMe = () => {
                         <Box className="education-category-item">
                             <h3>Management</h3>
                             <List>
-                                <ListItem>Certified Scrum Master (In Progress)</ListItem>
+                                <ListItem>Certified Scrum Master</ListItem>
+                            </List>
+                        </Box>
+                        <Box className="education-category-item">
+                            <h3>Data Science</h3>
+                            <List>
+                                <ListItem>AI Aware (In Progress)</ListItem>
+                                <ListItem>Data Science Bootcamp (In Progress)</ListItem>
                             </List>
                         </Box>
                     </Box>
