@@ -73,12 +73,13 @@ const AboutMe = () => {
                             <h3>AWS</h3>
                             <List>
                                 <ListItem>Cloud Practitioner</ListItem>
+                                <ListItem>Solutions Architect</ListItem>
                             </List>
                         </Box>
                         <Box className="education-category-item">
                             <h3>CompTIA</h3>
                             <List>
-                                <ListItem> A+</ListItem>
+                                <ListItem>A+</ListItem>
                                 <ListItem>Network+</ListItem>
                                 <ListItem>Security+</ListItem>
                                 <ListItem>Cloud+</ListItem>
@@ -89,6 +90,7 @@ const AboutMe = () => {
                             <h3>Management</h3>
                             <List>
                                 <ListItem>Certified Scrum Master</ListItem>
+                                <ListItem>ITIL 4: Foundations</ListItem>
                             </List>
                         </Box>
                         <Box className="education-category-item">
